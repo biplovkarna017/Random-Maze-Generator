@@ -70,10 +70,11 @@ def generate_maze():
 list1 = []
 while len(list1) < 100:
     list1 = generate_maze()
-print(len(list1))
-px, py = zip(*list1)
+px, py = zip(*list1[1:])
 plt.plot(px, py, 'o-')
 plt.grid()
-plt.xticks(range(-7, 8))
-plt.yticks(range(0, 15))
+plt.xticks(range(-7, 8), labels=[])
+plt.yticks(range(0, 15), labels=[])
+
+
 plt.show()
